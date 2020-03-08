@@ -1,0 +1,187 @@
+// .product{
+//     background-color: #EEE;
+//     padding: 10px;
+//     border:1px solid #CCC;
+//     width:300px;
+//     height:150px;
+//     justify-content: center;
+//     display: flex;
+//     align-items: center;
+//     position: relative;
+//     // animation: fadeInOut 2s infinite linear;
+//     @include prefixer(animation,fadeInOut 2s infinite linear,moz webkit);
+//    @include prefixer(box-shadow,10px 10px 10px #CCC, webkit moz o);
+//     .overlay{
+// @include overlay;
+// background-color: rgba($redColor, $alpha:0.4);
+// color:#FFF;
+//     }
+// }
+
+// @include myKeyFrame(fadeInOut){
+//     0%{
+//         opacity: .5;
+//     }
+//     50%{
+//         opacity: 1;
+//     }
+//     100%{
+//         opacity: .5;
+//     }
+// }
+
+//  start slider
+
+.slider{
+    blockquote{
+        font-size: 18px;
+        font-style: italic;
+        font-weight: bold;
+        font-family: Tahoma,Arial;
+        text-align: center;
+        line-height: 1.5;
+        color:#7F7F7F;
+        width: 80%;
+        margin: 25px auto;
+    }
+    img{
+        max-width: 100%;
+        border-radius: 3px;
+    }
+    .bullets{
+        text-align: center;
+        li{
+    display: inline-block;
+    //or float:$float-left;
+    width:15px;
+    height:15px; 
+    background-color: #CECECE;
+    border-radius: 50%;
+    border:2px solid #CECECE;
+    cursor: pointer;
+    &.active,
+    &:hover{
+     border:2px solid #333;
+     background-color: #FFF;
+    }   
+       }
+      
+    }
+}
+//end slider
+//start services
+.services{
+    .service-box{       
+      
+        @media #{$minMedium}{
+            float:$float-left;
+            width:calc(100%/3);
+            &:not(:last-of-type){
+                padding-right:20px;
+            }
+        }
+        @media #{$maxMobile}{
+           
+         i{
+             display: block;
+             margin-bottom: 10px;
+         }
+        }
+        .service-title{
+         i{
+           position: relative;
+           top:4px;
+          }
+        }
+        .service-desc{
+         color:$paragraphColor;
+         line-height: 1.5;
+        }
+        .link{
+        color:$redColor;
+        text-decoration: none;
+        }
+    }
+}
+//end services
+
+//start our-players
+.our-players{
+    .player-box{
+            // &:not(:last-of-type){
+            //     margin-right:1%;
+            // }
+            overflow: hidden;
+            @media #{$minSmall}{
+                float:$float-left;
+                width:calc(100%/2);
+                text-align: center;
+               margin-bottom: 40px;
+                &:last-of-type{
+                   margin: 20px 0px;
+                  width:calc(100%/1);
+                }
+            }
+            @media #{$minMedium}{
+                overflow: hidden;
+                width:calc(100%/3);
+                text-align: $text-left;
+                padding-left: 5px;
+                padding-right: 5px;
+                &:last-of-type{
+                    margin:0px;
+                   width:50%;
+                 }
+            }
+            @media #{$minLarge}{
+                width:(100%/5);
+                &:last-of-type{
+                   width:20%;
+                 }
+            }
+            @media #{$maxMobile}{
+               margin-bottom: 40px;
+            }
+        .player-img{
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        .player-title{
+            color:#B7B7B7;
+            font-weight: normal;
+         span{
+          font-weight: bold;
+          }
+        }
+        .player-desc{
+         color:$paragraphColor;
+         line-height: 1.5;
+        }
+        .link{
+        color:$redColor;
+        text-decoration: none;
+        }
+    }
+}
+//end our-players
+// start lorem
+.lorem{
+    .lorem-box{
+        float:$float-left;
+        width:(94%/3);
+         &:not(:last-of-type){
+            margin-right: 3%;
+        }
+        @media #{$maxMobile}{
+            margin-bottom: 40px;
+            float:none;
+            width:100%;
+            text-align: center;
+         }
+        .lorem-img{
+             max-width: 100%;
+            border-radius: 4px;
+        }
+    }
+}
+// end lorem
